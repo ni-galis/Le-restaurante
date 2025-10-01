@@ -1,50 +1,138 @@
 @use "./zeroing.scss";
 
 @font-face {
-	font-family: "Myriad Pro";
-	src: url("./../fonts/AnyConv.com__Myriad\ Bold\ Italic.woff") 	format('woff');
-	font-weight: 700;
-	font-style: italic;
-	font-display: swap;
+  font-family: "Myriad Pro";
+  src: url("./../fonts/AnyConv.com__Myriad\ Bold\ Italic.woff") format("woff");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
-	font-family: "Myriad Pro";
-	src: url("./../fonts/myriad-pro-light-italic.woff") 	format('woff');
-	font-weight: 300;
-	font-style: italic;
-	font-display: swap;
+  font-family: "Myriad Pro";
+  src: url("./../fonts/myriad-pro-light-italic.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
-	font-family: "Myriad Pro";
-	src: url("./../fonts/MYRIADPRO-BOLD.woff") 	format('woff');
-	font-weight: 700;
-	font-style: normal;
-	font-display: swap;
-}
-
-
-@font-face {
-	font-family: "Myriad Pro";
-	src: url("./../fonts/MyriadPro-Light.woff") 	format('woff');
-	font-weight: 300;
-	font-style: normal;
-	font-display: swap;
+  font-family: "Myriad Pro";
+  src: url("./../fonts/MYRIADPRO-BOLD.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-	font-family: "Myriad Pro";
-	src: url("./../fonts/MYRIADPRO-REGULAR.woff") 	format('woff');
-	font-weight: 400;
-	font-style: normal;
-	font-display: swap;
+  font-family: "Myriad Pro";
+  src: url("./../fonts/MyriadPro-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-	font-family: "Myriad Pro";
-	src: url("./../fonts/MYRIADPRO-SEMIBOLD.woff") 	format('woff');
-	font-weight: 600;
-	font-style: normal;
-	font-display: swap;
+  font-family: "Myriad Pro";
+  src: url("./../fonts/MYRIADPRO-REGULAR.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
+
+@font-face {
+  font-family: "Myriad Pro";
+  src: url("./../fonts/MYRIADPRO-SEMIBOLD.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+$bg-act: #f1ac11;
+$col-act: $bg-act;
+
+.active {
+  color: $col-act;
+  transition: 0.3s;
+  &:hover {
+    color: #fff;
+  }
+}
+
+a {
+  color: #fff;
+  transition: 0.3s;
+  &:hover {
+    color: $col-act;
+  }
+}
+
+body {
+  background-color: #ccc;
+  font-family: "Myriad Pro";
+}
+
+//----------------------------------
+
+.container {
+  width: 100%;
+  max-width: 1950px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+// /----------------------------------
+
+.nav {
+  width: 100%;
+  max-width: 1370px;
+margin: 0 auto;
+
+
+}
+
+.nav__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+.nav__logo {
+  margin-top: 40px;
+  margin-left: -84px;
+  cursor: pointer;
+}
+.nav__menu {
+  margin-right: -33px;
+  //margin-left: 250px;
+  margin-top: 45px;
+}
+.nav__list {
+  display: flex;
+  gap: 65px;
+}
+.nav__item {
+}
+.nav__link {
+  font-size: 22px;
+  color: #fff;
+  font-weight: bold;
+  font-style: italic;
+  text-transform: uppercase;
+
+}
+.nav__link.active::after {
+  content: "";
+  position: absolute;
+  top: 128px;
+  left: 650px;
+  width: 112px;
+  height: 3px;
+  background-color: $bg-act;
+  z-index: 1;
+}
+
+.active {
+  color: $col-act;
+  }
+
